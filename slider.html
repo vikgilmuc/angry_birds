@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slider demo</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <style>#slider { margin: 10px; }	</style>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div id="slider"></div>
+ 
+<script>
+$( "#slider" ).slider( {change: function( event, ui ) {console.log("hello change");
+        console.log(event);
+			console.log(ui);
+}});
+
+		
+</script>
+ 
+</body>
+</html>
+
