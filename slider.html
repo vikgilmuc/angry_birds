@@ -13,10 +13,26 @@
 <div id="slider"></div>
  
 <script>
-$( "#slider" ).slider( {change: function( event, ui ) {console.log("hello change");
-        console.log(event);
-			console.log(ui);
-}});
+$("#slider").slider({
+
+	 change: function( event, ui ) {
+
+			console.log("hello changes");
+		    //console.log(event);
+			//console.log(ui);
+			$.ajax( "localhost:4567/1" )
+			  .done(function() {
+			    alert( "success" );
+			  })
+			  .fail(function() {
+			    alert( "error" );
+			  })
+			  .always(function() {
+			    alert( "complete" );
+			  });
+		}
+
+	});
 
 		
 </script>
