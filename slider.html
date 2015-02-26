@@ -18,18 +18,15 @@ $("#slider").slider({
 	 change: function( event, ui ) {
 
 			console.log("hello changes");
-		    //console.log(event);
+		   	 //console.log(event);
 			//console.log(ui);
-			$.ajax( "localhost:4567/1" )
-			  .done(function() {
-			    alert( "success" );
-			  })
-			  .fail(function() {
-			    alert( "error" );
-			  })
-			  .always(function() {
-			    alert( "complete" );
-			  });
+			$.ajax( {
+			type: 'GET',
+			url:"http://localhost:4567/1",
+			//dataType:"jsonp",			
+			success: console.log("hello get")
+			})									
+			
 		}
 
 	});
